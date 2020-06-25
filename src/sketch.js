@@ -32,7 +32,17 @@ function setup() {
     width, widthEnemy, heightEnemy, 104, 104);
 
   frameRate(40);
-  cnv.mousePressed(toggleSound);
+}
+
+function mousePressed() {
+  if (!tapped)
+    toggleSound();
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    character.jump();
+  }
 }
 
 function draw() {
@@ -40,12 +50,13 @@ function draw() {
   scenario.move();
 
   character.show();
+  character.applyGravity();
 
   enemy.show();
   enemy.move();
 
   if (!tapped) {
-    text('tap to play', width / 2, 400);
+    text('Tap to play', width / 2 - 30, 350);
   }
 }
 
