@@ -1,5 +1,5 @@
 class Animated {
-    constructor(typeMatrix, image, x, widthCharacter, heightCharacter,
+    constructor(typeMatrix, image, x, variableY, widthCharacter, heightCharacter,
         widthSprite, heightSprite) {
 
         this.matrix = this.matrixByType(typeMatrix);
@@ -7,7 +7,8 @@ class Animated {
         this.widthCharacter = widthCharacter;
         this.heightCharacter = heightCharacter;
         this.x = x;
-        this.y = height - this.heightCharacter;
+        this.variableY = variableY;
+        this.y = height - this.heightCharacter - variableY;
         this.widthSprite = widthSprite;
         this.heightSprite = heightSprite;
 
@@ -30,6 +31,8 @@ class Animated {
     }
 
     matrixByType(typeMatrix) {
+        let matrix;
+
         const matrixCharacter = [
             [0, 0],
             [220, 0],
@@ -49,7 +52,7 @@ class Animated {
             [660, 810],
         ];
 
-        const matrixEnemy = [
+        const matrixDroplet = [
             [0, 0],
             [105, 0],
             [210, 0],
@@ -66,20 +69,85 @@ class Animated {
             [105, 312],
             [210, 312],
             [315, 312],
-            [0, 409],
-            [105, 409],
-            [210, 409],
-            [315, 409],
-            [0, 503],
-            [105, 503],
-            [210, 503],
-            [315, 503],
-            [0, 609],
-            [105, 609],
-            [210, 609],
-            [315, 609]
+            [0, 406],
+            [105, 406],
+            [210, 404],
+            [315, 404],
+            [0, 498],
+            [105, 498],
+            [210, 498],
+            [315, 498],
+            [0, 604],
+            [105, 606],
+            [210, 606],
+            [315, 606]
         ];
 
-        return typeMatrix === 'character' ? matrixCharacter : matrixEnemy;
+        const matrixDropletFlyer = [
+            [0, 0],
+            [200, 0],
+            [400, 0],
+            [0, 150],
+            [200, 150],
+            [400, 150],
+            [0, 300],
+            [200, 300],
+            [400, 300],
+            [0, 450],
+            [200, 450],
+            [400, 450],
+            [0, 600],
+            [200, 600],
+            [400, 600],
+            [0, 750],
+        ];
+
+        const matrixTroll = [
+            [0, 0],
+            [400, 0],
+            [800, 0],
+            [1200, 0],
+            [1600, 0],
+            [0, 400],
+            [400, 400],
+            [800, 400],
+            [1200, 400],
+            [1600, 400],
+            [0, 800],
+            [400, 800],
+            [800, 800],
+            [1200, 800],
+            [1600, 800],
+            [0, 1200],
+            [400, 1200],
+            [800, 1200],
+            [1200, 1200],
+            [1600, 1200],
+            [0, 1600],
+            [400, 1600],
+            [800, 1600],
+            [1200, 1600],
+            [1600, 1600],
+            [0, 2000],
+            [400, 2000],
+            [800, 2000],
+        ];
+
+        switch (typeMatrix) {
+            case 'character':
+                matrix = matrixCharacter;
+                break;
+            case 'droplet':
+                matrix = matrixDroplet;
+                break;
+            case 'dropletFlyer':
+                matrix = matrixDropletFlyer;
+                break;
+            case 'troll':
+                matrix = matrixTroll;
+                break;
+        }
+
+        return matrix;
     }
 }
