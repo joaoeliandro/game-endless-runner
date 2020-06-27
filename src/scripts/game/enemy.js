@@ -1,8 +1,15 @@
 class Enemy extends Animated {
-    constructor(typeMatrix, image, x, variableY, widthEnemy, heightEnemy,
-        widthSprite, heightSprite, speed, delay) {
-        super(typeMatrix, image, x, variableY, widthEnemy, heightEnemy,
-            widthSprite, heightSprite);
+    constructor(
+        typeMatrix,
+        image, x,
+        variableY,
+        widthEnemy,
+        heightEnemy,
+        widthSprite,
+        heightSprite,
+        speed, delay) {
+        super(typeMatrix, image, x, variableY, widthEnemy,
+            heightEnemy, widthSprite, heightSprite);
 
         this.speed = speed;
         this.delay = delay;

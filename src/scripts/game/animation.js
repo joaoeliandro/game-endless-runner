@@ -1,6 +1,12 @@
 class Animated {
-    constructor(typeMatrix, image, x, variableY, widthCharacter, heightCharacter,
-        widthSprite, heightSprite) {
+    constructor(
+        typeMatrix,
+        image, x,
+        variableY,
+        widthCharacter,
+        heightCharacter,
+        widthSprite,
+        heightSprite) {
 
         this.matrix = this.matrixByType(typeMatrix);
         this.image = image;
@@ -13,6 +19,8 @@ class Animated {
         this.heightSprite = heightSprite;
 
         this.currentFrame = 0;
+
+        this.matrix;
     }
 
     show() {
@@ -31,8 +39,6 @@ class Animated {
     }
 
     matrixByType(typeMatrix) {
-        let matrix;
-
         const matrixCharacter = [
             [0, 0],
             [220, 0],
@@ -135,19 +141,19 @@ class Animated {
 
         switch (typeMatrix) {
             case 'character':
-                matrix = matrixCharacter;
+                this.matrix = matrixCharacter;
                 break;
             case 'droplet':
-                matrix = matrixDroplet;
+                this.matrix = matrixDroplet;
                 break;
             case 'dropletFlyer':
-                matrix = matrixDropletFlyer;
+                this.matrix = matrixDropletFlyer;
                 break;
             case 'troll':
-                matrix = matrixTroll;
+                this.matrix = matrixTroll;
                 break;
         }
 
-        return matrix;
+        return this.matrix;
     }
 }
