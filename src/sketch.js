@@ -5,6 +5,10 @@ let character;
 let game;
 let tapped;
 let gameover;
+let currentScene = 'starterScreen';
+let scenes;
+let starterScreen;
+let buttonMenager;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -24,11 +28,16 @@ function setup() {
     soundGameOver);
   game.setup();
 
-  frameRate(40);
-}
+  starterScreen = new StarterScreen();
 
-function mousePressed() {
-  if (!tapped) game.toggleSound();
+  scenes = {
+    game,
+    starterScreen,
+  };
+
+  buttonMenager = new ButtonMenager('Tap to Play ▶ ', width / 2, height / 2);
+
+  frameRate(40);
 }
 
 function keyPressed() {
@@ -36,9 +45,6 @@ function keyPressed() {
 }
 
 function draw() {
-  scenario.show();
-  score.show();
-
-  if (!tapped) game.tapToPlay();
+  if (!tapped) scenes[currentScene].draw();
   else game.drawGame();
 }
