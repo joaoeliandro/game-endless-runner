@@ -90,13 +90,9 @@ class Game {
             if (tapped) this.soundGame.stop();
 
             image(this.imageGameOver, width / 2 - 200, height / 2 - 50);
-            // this.soundGameOver.play();
+            this.soundGameOver.play();
             noLoop();
         }
     }
 
-    toggleSound() {
-        tapped = true;
-        // this.soundGame.loop();
-    }
 }
