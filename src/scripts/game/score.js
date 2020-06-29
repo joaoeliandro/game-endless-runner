@@ -7,6 +7,7 @@ class Score {
         textAlign(CENTER);
         fill('#fff');
         textSize(45);
+        textFont('Georgia');
         text('Score: ' + parseInt(this.score), width / 2, 50);
     }
 
