@@ -1,5 +1,8 @@
 let imageScenario;
+let imageStarterScreen;
 let imageGameOver;
+let fontGame;
+
 let imageCharacter;
 let imageDroplet;
 let imageTroll;
@@ -11,11 +14,13 @@ let soundJump;
 
 function preload() {
     imageScenario = loadImage('http://localhost:3333/images/scenario/forest.png');
+    imageStarterScreen = loadImage('http://localhost:3333/images/assets/starterScreen.png');
     imageGameOver = loadImage('http://localhost:3333/images/assets/game-over.png');
 
-    imageCharacter = loadImage('http://localhost:3333/images/character/running.png');
+    fontGame = loadFont('http://localhost:3333/public/fontGame.otf');
+
+    imageCharacter = loadImage('http://localhost:3333/images/character/mary.png');
     imageDroplet = loadImage('http://localhost:3333/images/enemies/droplet.png');
-    imageDropletFlyer = loadImage('http://localhost:3333/images/enemies/droplet.png');
     imageDropletFlyer = loadImage('http://localhost:3333/images/enemies/droplet_flyer.png');
     imageTroll = loadImage('http://localhost:3333/images/enemies/troll.png');
 
