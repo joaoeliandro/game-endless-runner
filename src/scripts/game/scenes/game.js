@@ -63,6 +63,9 @@ class Game {
     }
 
     drawGame() {
+        scenario.show();
+        score.show();
+
         score.addScore();
         scenario.move();
 
@@ -95,17 +98,5 @@ class Game {
     toggleSound() {
         tapped = true;
         // this.soundGame.loop();
-    }
-
-    tapToPlay() {
-        rectMode(CENTER);
-        stroke('red');
-        strokeWeight(4);
-        rect(width / 2, height / 2 - 10, 350, 80, 10);
-
-        textAlign(CENTER);
-        fill('#fff');
-        textSize(45);
-        text('Tap to play', width / 2, height / 2);
     }
 }
