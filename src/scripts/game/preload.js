@@ -1,5 +1,6 @@
 let imageScenario;
 let imageStarterScreen;
+let imageHeart;
 let imageGameOver;
 let fontGame;
 
@@ -15,6 +16,7 @@ let soundJump;
 function preload() {
     imageScenario = loadImage('http://localhost:3333/images/scenario/forest.png');
     imageStarterScreen = loadImage('http://localhost:3333/images/assets/starterScreen.png');
+    imageHeart = loadImage('http://localhost:3333/images/assets/heart.png');
     imageGameOver = loadImage('http://localhost:3333/images/assets/game-over.png');
 
     fontGame = loadFont('http://localhost:3333/public/fontGame.otf');
