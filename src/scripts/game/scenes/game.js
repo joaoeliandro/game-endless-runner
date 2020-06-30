@@ -62,9 +62,11 @@ class Game {
         }
     }
 
-    drawGame() {
+    draw() {
         scenario.show();
         score.show();
+
+        life.draw();
 
         score.addScore();
         scenario.move();
@@ -85,13 +87,15 @@ class Game {
         enemy.move();
 
         if (character.isColliding(enemy)) {
-            gameover = true;
+            if (life.loseLife()) {
+                gameover = true;
 
-            if (tapped) this.soundGame.stop();
+                if (tapped) this.soundGame.stop();
 
-            image(this.imageGameOver, width / 2 - 200, height / 2 - 50);
-            this.soundGameOver.play();
-            noLoop();
+                image(this.imageGameOver, width / 2 - 200, height / 2 - 50);
+                this.soundGameOver.play();
+                noLoop();
+            }
         }
     }
 
