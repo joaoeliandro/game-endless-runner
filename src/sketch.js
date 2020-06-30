@@ -1,10 +1,12 @@
 let scenario;
 let score;
+let life;
 let character;
 
 let game;
 let tapped;
 let gameover;
+// let currentScene = 'game';
 let currentScene = 'starterScreen';
 let scenes;
 let starterScreen;
@@ -37,6 +39,8 @@ function setup() {
 
   buttonMenager = new ButtonMenager('Tap to Play ▶ ', width / 2, height / 2);
 
+  life = new Life(3, 3);
+
   frameRate(40);
 }
 
@@ -46,5 +50,5 @@ function keyPressed() {
 
 function draw() {
   if (!tapped) scenes[currentScene].draw();
-  else game.drawGame();
+  else game.draw();
 }
