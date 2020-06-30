@@ -1,7 +1,5 @@
 class StarterScreen {
-    constructor() {
-
-    }
+    constructor() { }
 
     draw() {
         this._imageBackground();
@@ -24,7 +22,7 @@ class StarterScreen {
         textSize(150);
         text('Mary', width / 2, height / 5 * 3);
     }
-    
+
     _tapToPlay() {
         buttonMenager.posicionY = height / 7 * 5;
         buttonMenager.draw();
