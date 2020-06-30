@@ -7,6 +7,8 @@ class ButtonMenager {
         this.button = createButton(this.textButton);
         this.button.mousePressed(() => this._changeScene());
         this.button.addClass('button-starter-screen');
+
+        if (currentScene === 'game') this.button.remove();
     }
 
     draw() {
