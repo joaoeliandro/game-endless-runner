@@ -29,8 +29,14 @@ class Life {
     }
 
     loseLife() {
-        if (this.lifes < 1) return true;
+        if (this.lifes < 2) return true;
+        
         this.lifes--;
+        
+        soundCollision.play();
+        
+        character.isInvincible();
+
         return false;
     }
 }
