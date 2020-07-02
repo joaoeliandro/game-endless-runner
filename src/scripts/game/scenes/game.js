@@ -87,7 +87,9 @@ class Game {
         enemy.move();
 
         if (character.isColliding(enemy)) {
-            if (life.loseLife()) {
+            let dead = life.loseLife();
+
+            if (dead) {
                 gameover = true;
 
                 if (tapped) this.soundGame.stop();
