@@ -18,6 +18,7 @@ class Character extends Animated {
         this.jumps = 0;
 
         this.precision = .6;
+        this.invincible = false;
     }
 
     jump() {
@@ -43,6 +44,9 @@ class Character extends Animated {
         // noFill()
         // rect(this.x, this.y, this.widthCharacter, this.heightCharacter);
         // rect(enemy.x, enemy.y, enemy.widthCharacter, enemy.heightCharacter);
+
+        if (this.invincible) return false;
+
         const collide = collideRectRect(
             this.x,
             this.y,
@@ -54,5 +58,13 @@ class Character extends Animated {
             enemy.heightCharacter * this.precision);
 
         return collide;
+    }
+
+    isInvincible() {
+        this.invincible = true;
+
+        setTimeout(() => {
+            this.invincible = false;
+        }, 1000);
     }
 }
