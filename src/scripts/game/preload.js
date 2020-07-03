@@ -17,22 +17,22 @@ let soundJump;
 let soundCollision;
 
 function preload() {
-    imageScenario = loadImage('http://localhost:3333/images/scenario/forest.png');
-    imageStarterScreen = loadImage('http://localhost:3333/images/assets/starterScreen.png');
-    imageHeart = loadImage('http://localhost:3333/images/assets/heart.png');
-    imageGameOver = loadImage('http://localhost:3333/images/assets/game-over.png');
+    imageScenario = loadImage('https://theadventuresofmary.herokuapp.com/images/scenario/forest.png');
+    imageStarterScreen = loadImage('https://theadventuresofmary.herokuapp.com/images/assets/starterScreen.png');
+    imageHeart = loadImage('https://theadventuresofmary.herokuapp.com/images/assets/heart.png');
+    imageGameOver = loadImage('https://theadventuresofmary.herokuapp.com/images/assets/game-over.png');
 
-    disk = loadJSON('http://localhost:3333/scripts/disk.json');
+    disk = loadJSON('https://theadventuresofmary.herokuapp.com/scripts/disk.json');
 
-    fontGame = loadFont('http://localhost:3333/public/fontGame.otf');
+    fontGame = loadFont('https://theadventuresofmary.herokuapp.com/public/fontGame.otf');
 
-    imageCharacter = loadImage('http://localhost:3333/images/character/mary.png');
-    imageDroplet = loadImage('http://localhost:3333/images/enemies/droplet.png');
-    imageDropletFlyer = loadImage('http://localhost:3333/images/enemies/droplet_flyer.png');
-    imageTroll = loadImage('http://localhost:3333/images/enemies/troll.png');
+    imageCharacter = loadImage('https://theadventuresofmary.herokuapp.com/images/character/mary.png');
+    imageDroplet = loadImage('https://theadventuresofmary.herokuapp.com/images/enemies/droplet.png');
+    imageDropletFlyer = loadImage('https://theadventuresofmary.herokuapp.com/images/enemies/droplet_flyer.png');
+    imageTroll = loadImage('https://theadventuresofmary.herokuapp.com/images/enemies/troll.png');
 
-    soundGame = loadSound('http://localhost:3333/sounds/sound_game.mp3');
-    soundGameOver = loadSound('http://localhost:3333/sounds/sound_gameover.mp3');
-    soundJump = loadSound('http://localhost:3333/sounds/sound_jump.mp3');
-    soundCollision = loadSound('http://localhost:3333/sounds/sound_collision.mp3');
+    soundGame = loadSound('https://theadventuresofmary.herokuapp.com/sounds/sound_game.mp3');
+    soundGameOver = loadSound('https://theadventuresofmary.herokuapp.com/sounds/sound_gameover.mp3');
+    soundJump = loadSound('https://theadventuresofmary.herokuapp.com/sounds/sound_jump.mp3');
+    soundCollision = loadSound('https://theadventuresofmary.herokuapp.com/sounds/sound_collision.mp3');
 }
