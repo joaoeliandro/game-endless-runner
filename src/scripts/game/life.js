@@ -1,7 +1,7 @@
 class Life {
-    constructor(maxLife, starterLife) {
-        this.maxLife = maxLife;
-        this.starterLife = starterLife;
+    constructor() {
+        this.maxLife = disk.config.maxLife;
+        this.starterLife = disk.config.starterLife;
 
         this.lifes = this.starterLife;
 
