@@ -6,7 +6,6 @@ let character;
 let game;
 let tapped;
 let gameover;
-// let currentScene = 'game';
 let currentScene = 'starterScreen';
 let scenes;
 let starterScreen;
@@ -39,7 +38,7 @@ function setup() {
 
   buttonMenager = new ButtonMenager('Tap to Play ▶ ', width / 2, height / 2);
 
-  life = new Life(3, 3);
+  life = new Life();
 
   frameRate(40);
 }
