@@ -4,6 +4,8 @@ let imageHeart;
 let imageGameOver;
 let fontGame;
 
+let disk;
+
 let imageCharacter;
 let imageDroplet;
 let imageTroll;
@@ -19,6 +21,8 @@ function preload() {
     imageStarterScreen = loadImage('http://localhost:3333/images/assets/starterScreen.png');
     imageHeart = loadImage('http://localhost:3333/images/assets/heart.png');
     imageGameOver = loadImage('http://localhost:3333/images/assets/game-over.png');
+
+    disk = loadJSON('http://localhost:3333/scripts/disk.json');
 
     fontGame = loadFont('http://localhost:3333/public/fontGame.otf');
 
