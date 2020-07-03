@@ -33,6 +33,9 @@ class Game {
 
         this.currentEnemy = 0;
         this.enemies = [];
+
+        this.index = 0;
+        this.map = disk.map;
     }
 
     setup() {
@@ -43,12 +46,11 @@ class Game {
             80, 30, this.widthCharacter, this.heightCharacter, 220, 270);
 
         const droplet = new Enemy('droplet', this.imageDroplet,
-            width, 30, this.widthDroplet, this.heightDroplet, 104, 104, 9, 100);
+            width, 30, this.widthDroplet, this.heightDroplet, 104, 104, 9);
         const troll = new Enemy('troll', this.imageTroll,
-            width, 0, this.widthTroll, this.heightTroll, 400, 400, 9, 100);
+            width, 0, this.widthTroll, this.heightTroll, 400, 400, 9);
         const dropletFlyer = new Enemy('dropletFlyer', this.imageDropletFlyer,
-            width, 300, this.widthdropletFlyer, this.heightdropletFlyer, 200,
-            150, 8, 100);
+            width, 300, this.widthdropletFlyer, this.heightdropletFlyer, 200, 150, 8);
 
         this.enemies.push(droplet);
         this.enemies.push(troll);
@@ -74,17 +76,22 @@ class Game {
         character.show();
         character.applyGravity();
 
-        const enemy = this.enemies[this.currentEnemy];
+        const currentLine = this.map[this.index];
+        const enemy = this.enemies[currentLine.enemy];
         const enemyVisible = enemy.x < -enemy.widthCharacter;
 
-        if (enemyVisible) {
-            this.currentEnemy++;
-            if (this.currentEnemy > this.enemies.length - 1) this.currentEnemy = 0;
-            enemy.speed = parseInt(random(10, 15));
-        }
+        enemy.speed = currentLine.speed;
 
         enemy.show();
         enemy.move();
+
+        if (enemyVisible) {
+            this.index++;
+
+            enemy.reappears();
+
+            if (this.index > this.map.length - 1) this.index = 0;
+        }
 
         if (character.isColliding(enemy)) {
             let dead = life.loseLife();
