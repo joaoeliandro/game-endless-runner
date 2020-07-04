@@ -29,29 +29,51 @@ but we can already see something and more ahead will have new updates. Wait!
     <img alt="Repository issues" src="https://img.shields.io/github/issues/joaoeliandro/game-endless-runner.svg">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/joaoeliandro/game-endless-runner.svg">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/joaoeliandro/game-endless-runner.svg">
 </p>
 
 <p align="center">
+  <a href="#clapper-introduction-video">Introduction video</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
+<p align="center">
+  <img alt="Game Demo" src="https://res.cloudinary.com/dy7l1wk3y/image/upload/v1593851195/ezgif.com-crop_ag8juf.gif">
+</p>
+<p align="center">
+  <a href="https://theadventuresofmary.herokuapp.com/" target="_blank">
+    <img alt="Demo on Heroku" src="https://res.cloudinary.com/dy7l1wk3y/image/upload/v1593850593/demo-stamp-red-white-99832396_x3igw6.png">
+  </a>
+</p>
+
 ## About
 
-Game to improve my programming skills.
-"The adventures of Mary" is a game made in Javascript initially conceived during the week of GameDev Immersion of the platform Alura. However, during training, I wanted to create something to have fun and learn at the same time. Based on the game Braid by Jonathan Blow, "The adventures of Mary" aims to deliver something simple, but with dialogues and gameplay that criticize something. Wait!
+**Game to improve my programming skills.**
+> ***"The adventures of Mary"*** is a game made in Javascript initially conceived during the week of GameDev Immersion of the platform Alura. However, during training, I wanted to create something to have fun and learn at the same time. Based on the game Braid by Jonathan Blow, ***"The adventures of Mary"*** aims to deliver something simple, but with dialogues and gameplay that criticize something. **Wait!**
+
+---
+
+## :clapper: Introduction video
+
+Watch the [video](https://www.youtube.com/watch?v=7Q-By5UWpto) below the introduction of this game.
+
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=7Q-By5UWpto">
+        <img src="https://img.youtube.com/vi/7Q-By5UWpto/0.jpg" alt="Introduction the game The Adventures of Mary">
+    </a>
+</p>
 
 ## :rocket: Technologies
 
 This project was developed at the [João Eliandro](https://github.com/joaoeliandro) with the following technologies:
 
-- [NodeJS](https://nodejs.org)
-- [ExpressJS](https://expressjs.com/)
-- [p5.Js](https://p5js.org/)
-- [VS Code](https://code.visualstudio.com/)
-- And another bunch of packages...
+> - [NodeJS](https://nodejs.org)
+> - [ExpressJS](https://expressjs.com/)
+> - [p5.Js](https://p5js.org/)
+> - [VS Code](https://code.visualstudio.com/)
+> - And another bunch of packages...
 
 ## :information_source: How To Use
 
